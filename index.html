@@ -1,293 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextArch - Especialistas em BMS</title>
-    <style>
-        :root {
-            --primary: #6a0dad;
-            --primary-light: #9b59b6;
-            --primary-dark: #4b0082;
-            --white: #ffffff;
-            --gray: #f5f5f5;
-            --dark: #333333;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--white);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-icon {
-            margin-right: 10px;
-            font-size: 32px;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            padding-top: 80px;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: var(--white);
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(106, 13, 173, 0.2);
-        }
-
-        /* Services */
-        .services {
-            padding: 100px 0;
-            background-color: var(--gray);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            color: var(--primary-dark);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(106, 13, 173, 0.1);
-        }
-
-        .service-icon {
-            font-size: 50px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        /* Contact Form */
-        .contact {
-            padding: 100px 0;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(106, 13, 173, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-dark);
-            color: var(--white);
-            padding: 50px 0 20px;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextArch - Pesquisa sobre BMS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d'); /* imagem de prédio moderno */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <span class="logo-icon">🏢</span>
-                    <span>NextArch</span>
-                </div>
-            </nav>
-        </div>
-    </header>
+<body class="min-h-screen flex items-center justify-center p-6">
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Soluções Inteligentes em BMS</h1>
-                <p>A NextArch é líder em Building Management Systems, oferecendo tecnologia avançada para gestão integrada de edifícios comerciais e corporativos.</p>
-                <a href="#contact" class="btn">Solicitar Demonstração</a>
-            </div>
-        </div>
-    </section>
+  <div class="overlay max-w-4xl w-full p-8 rounded-3xl shadow-2xl backdrop-blur-md">
+    <h1 class="text-4xl font-extrabold text-center text-purple-800 mb-4">NextArch</h1>
+    <p class="text-center text-gray-700 text-lg mb-6">
+      Somos especialistas em soluções de automação e gestão predial inteligente.
+      Participe da nossa pesquisa para entender como podemos atender melhor suas necessidades com sistemas de BMS (Building Management System).
+    </p>
 
-    <section class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nossos Serviços em BMS</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💡</div>
-                    <h3>Automação Predial</h3>
-                    <p>Sistemas integrados para controle de iluminação, climatização e acesso.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Monitoramento Energético</h3>
-                    <p>Soluções para redução de consumo e eficiência energética.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Segurança Integrada</h3>
-                    <p>Controle unificado de CFTV, acesso e detecção de incêndio.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScM_C_DiLPh1SwLlwW1whDnzhnXIN63He-mWt96JtNYxJfAaA/viewform?embedded=true"
+      width="100%" height="1248" frameborder="0" marginheight="0" marginwidth="0">
+      Carregando…
+    </iframe>
+  </div>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Entre em Contato</h2>
-            </div>
-            <div class="contact-form">
-                <form id="bmsContactForm">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Serviço de Interesse</label>
-                        <select id="service">
-                            <option value="bms">Sistema BMS Completo</option>
-                            <option value="energy">Eficiência Energética</option>
-                            <option value="security">Sistemas de Segurança</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar Mensagem</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>NextArch &copy; 2023 - Especialistas em Building Management Systems</p>
-            <p>contato@nextarch.com | (11) 4002-8922</p>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('bmsContactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
